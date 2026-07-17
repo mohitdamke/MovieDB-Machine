@@ -1,4 +1,4 @@
-package com.mohit.moviedbmachine.di
+package com.mohit.moviedbmachine.di.network
 
 import com.mohit.moviedbmachine.Constants
 import com.mohit.moviedbmachine.data.remote.ApiService
@@ -18,7 +18,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideAuthInterceptor(): AuthInterceptor{
+    fun provideAuthInterceptor(): AuthInterceptor {
         return AuthInterceptor()
     }
 
@@ -26,7 +26,7 @@ object NetworkModule {
     @Singleton
     fun provideOkHttpClient(
         authInterceptor: AuthInterceptor
-    ): OkHttpClient{
+    ): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(authInterceptor)
             .build()
@@ -50,7 +50,7 @@ object NetworkModule {
     @Singleton
     fun provideApiService(
         retrofit: Retrofit
-    ): ApiService{
+    ): ApiService {
         return retrofit.create(ApiService::class.java)
     }
 

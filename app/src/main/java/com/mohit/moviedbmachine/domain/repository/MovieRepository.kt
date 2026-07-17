@@ -1,6 +1,5 @@
 package com.mohit.moviedbmachine.domain.repository
 
-import androidx.room.Query
 import com.mohit.moviedbmachine.domain.model.Movie
 import com.mohit.moviedbmachine.domain.model.MovieDetail
 

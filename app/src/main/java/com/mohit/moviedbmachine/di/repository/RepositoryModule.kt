@@ -1,4 +1,4 @@
-package com.mohit.moviedbmachine.di
+package com.mohit.moviedbmachine.di.repository
 
 import com.mohit.moviedbmachine.data.repository.MovieRepoImpl
 import com.mohit.moviedbmachine.domain.repository.MovieRepository

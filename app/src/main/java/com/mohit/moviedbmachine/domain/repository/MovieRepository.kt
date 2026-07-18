@@ -12,7 +12,7 @@ interface MovieRepository {
     ): List<Movie>
 
     suspend fun getMovieDetail(
-        movieId : Int
+        movieId: Int
     ): MovieDetail
 
 }

@@ -10,9 +10,9 @@ import javax.inject.Inject
 
 class MovieRepoImpl @Inject constructor(
     private val apiService: ApiService
-): MovieRepository {
+) : MovieRepository {
     override suspend fun getPopularMovies(
-        page : Int
+        page: Int
     ): List<Movie> {
         return apiService
             .getPopularMovies(page = page)
